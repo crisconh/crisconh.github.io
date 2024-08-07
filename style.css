@@ -1,0 +1,247 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  color: black;
+  font-family: "Raleway", sans-serif;
+}
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.nav {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+.brand-nav {
+  position: absolute;
+  margin: auto;
+}
+.nav-logo-text {
+  letter-spacing: 0.8vw;
+  text-align: center;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  width: 100%;
+  min-width: 100%;
+}
+
+.nav-link {
+  text-decoration: none;
+  padding: 5px;
+  margin: 0 20px 0 40px;
+  position: relative;
+}
+
+.burger-menu-btn {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  top: 0;
+  right: 0;
+  margin: 25px;
+  visibility: hidden;
+}
+
+.burger-icon {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.nav-link:after {
+  content: ""; /* Add content after the element */
+  position: absolute; /* Position absolute for pseudo-element */
+  width: 100%; /* Full width */
+  transform: scaleX(0); /* Initial scale of 0 for underline effect */
+  height: 1px; /* Height of the underline */
+  bottom: 0; /* Align to bottom */
+  left: 0; /* Align to left */
+  background-color: #000000; /* Background color of the underline */
+  transform-origin: bottom right; /* Set transform origin */
+  transition: transform 0.25s ease-out; /* Transition effect for the underline */
+}
+
+.nav-link:hover:after {
+  transform: scaleX(1); /* Scale the underline on hover */
+  transform-origin: bottom left; /* Set transform origin */
+}
+
+.link-left {
+  position: absolute;
+  left: 0;
+}
+
+.section-wrapper {
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+.hero-wrapper {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+.hero-img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.hero-bg-txt {
+  position: relative;
+  top: 50vh;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+}
+.atelier-txt {
+  font-family: "Roboto Slab", serif;
+  font-weight: 100;
+  margin: 20px 0 10px 0;
+  letter-spacing: 2vw;
+  font-size: 15vw;
+  height: 120%;
+}
+
+.separator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+  min-height: 120px;
+  opacity: 0;
+}
+
+.section-2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  min-height: 90vh;
+}
+.line {
+  width: 1px;
+  min-height: 120px;
+  background-color: black;
+}
+.artwork-wrapper {
+  width: 100vw;
+  height: 60vh;
+}
+.briefing {
+  max-width: 474px;
+  margin: 30px;
+  text-align: justify;
+  letter-spacing: 1px;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 18px;
+}
+.swiper {
+  width: 100%;
+  height: 100%;
+  margin-top: 30px;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 80%;
+  height: 80%;
+  object-fit: contain;
+  transition: all 0.3s ease-out;
+  cursor: pointer;
+}
+
+.swiper-slide img:hover {
+  transform: scale(1.1);
+}
+
+video {
+  width: 100%;
+  height: 100%;
+  padding: 10vh 0;
+  object-fit: cover;
+}
+
+.section-4 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.profile-pic-wrapper {
+  min-width: 60%;
+  height: 70vh;
+}
+
+.profile-pic {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+.artist-quote-wrapper {
+  justify-content: center;
+  align-items: center;
+  padding-left: 60px;
+  padding-right: 20px;
+  display: flex;
+  position: relative;
+}
+
+.separator-2 {
+  background-color: #000;
+  width: 67px;
+  height: 1px;
+  position: absolute;
+  top: 50%;
+  bottom: 0%;
+  left: -33px;
+  right: auto;
+}
+
+@media (max-width: 991px) {
+}
+@media (max-width: 767px) {
+  .burger-menu-btn {
+    visibility: visible;
+  }
+  .nav-link {
+    visibility: hidden;
+  }
+}
+@media (max-width: 478px) {
+}
