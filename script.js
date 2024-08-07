@@ -1,4 +1,5 @@
 gsap.registerPlugin(ScrollTrigger);
+var mobileMenuOpen = false;
 
 window.onload = function () {
   var timeline = new TimelineMax();
@@ -37,38 +38,64 @@ gsap.from(".swiper", {
     start: "center bottom",
     toggleAction: "play none none none",
   },
-opacity: 0,
-y: 100,
-scale: 1.2,
+  opacity: 0,
+  y: 100,
+  scale: 1.2,
   duration: 1,
-  ease: "power1.out"
+  ease: "power1.out",
 });
 
-const videos = gsap.utils.toArray('video')
+const videos = gsap.utils.toArray("video");
 
-videos.forEach(function(video, i) {
-    
+videos.forEach(function (video, i) {
   ScrollTrigger.create({
     trigger: video,
-    start: 'top center',
-    end: 'bottom center',
+    start: "top center",
+    end: "bottom center",
     onEnter: () => video.play(),
     onEnterBack: () => video.play(),
     onLeave: () => video.pause(),
     onLeaveBack: () => video.pause(),
   });
-  
-})
+});
+
+//CODE For mobile menu
+let mobileMenuBtn = document.getElementById("mobile-menu-btn");
+let mobileMenuBtnClose = document.getElementById("mobile-menu-btn-close");
+let mobileMenu = document.getElementById("mobile-menu");
+
+mobileMenuBtn.addEventListener("click", () => {
+  mobileMenu.style.visibility = "visible";
+  mobileMenu.style.transform = "translateY(0)";
+});
+
+mobileMenuBtnClose.addEventListener("click", () => {
+  console.log("CCC")
+  mobileMenu.style.visibility = "hidden";
+  mobileMenu.style.transform = "translateY(100vh)";
+});
 
 //CODE FOR THE CARROUSEL
 
 var swiper = new Swiper(".mySwiper", {
-  slidesPerView: 3,
   spaceBetween: 30,
   freeMode: true,
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
-    enabled: false
+    enabled: false,
+  },
+  // Responsive breakpoints
+  breakpoints: {
+    // when window width is <= 499px
+    478: {
+      slidesPerView: 1.5,
+      spaceBetweenSlides: 20,
+    },
+    // when window width is <= 999px
+    767: {
+      slidesPerView: 2.5,
+      spaceBetweenSlides: 20,
+    },
   },
 });
