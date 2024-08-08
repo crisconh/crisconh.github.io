@@ -7,6 +7,7 @@
   color: black;
   font-family: "Raleway", sans-serif;
 }
+
 body {
   min-height: 100vh;
   overflow-x: hidden;
@@ -22,10 +23,12 @@ body {
   justify-content: center;
   z-index: 10;
 }
+
 .brand-nav {
   position: absolute;
   margin: auto;
 }
+
 .nav-logo-text {
   letter-spacing: 0.8vw;
   text-align: center;
@@ -63,7 +66,7 @@ body {
   object-fit: cover;
 }
 
-.mobile-menu{
+.mobile-menu {
   width: 100vw;
   height: 100vh;
   background-color: white;
@@ -75,7 +78,7 @@ body {
   transition: all 0.3s ease-in;
 }
 
-.mobile-menu-links{
+.mobile-menu-links {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -88,31 +91,45 @@ body {
   margin-right: 20px;
 }
 
-.mobile-nav-link{
+.mobile-nav-link {
   align-content: center;
   font-size: 2em;
   margin: 50px 0;
   text-decoration: none;
 }
-#mobile-menu-btn-close{
+
+#mobile-menu-btn-close {
   z-index: 20;
 }
+
 .nav-link:after {
-  content: ""; /* Add content after the element */
-  position: absolute; /* Position absolute for pseudo-element */
-  width: 100%; /* Full width */
-  transform: scaleX(0); /* Initial scale of 0 for underline effect */
-  height: 1px; /* Height of the underline */
-  bottom: 0; /* Align to bottom */
-  left: 0; /* Align to left */
-  background-color: #000000; /* Background color of the underline */
-  transform-origin: bottom right; /* Set transform origin */
-  transition: transform 0.25s ease-out; /* Transition effect for the underline */
+  content: "";
+  /* Add content after the element */
+  position: absolute;
+  /* Position absolute for pseudo-element */
+  width: 100%;
+  /* Full width */
+  transform: scaleX(0);
+  /* Initial scale of 0 for underline effect */
+  height: 1px;
+  /* Height of the underline */
+  bottom: 0;
+  /* Align to bottom */
+  left: 0;
+  /* Align to left */
+  background-color: #000000;
+  /* Background color of the underline */
+  transform-origin: bottom right;
+  /* Set transform origin */
+  transition: transform 0.25s ease-out;
+  /* Transition effect for the underline */
 }
 
 .nav-link:hover:after {
-  transform: scaleX(1); /* Scale the underline on hover */
-  transform-origin: bottom left; /* Set transform origin */
+  transform: scaleX(1);
+  /* Scale the underline on hover */
+  transform-origin: bottom left;
+  /* Set transform origin */
 }
 
 .link-left {
@@ -125,6 +142,7 @@ body {
   width: 100%;
   overflow: hidden;
 }
+
 .hero-wrapper {
   height: 100%;
   width: 100%;
@@ -133,6 +151,7 @@ body {
   left: 0;
   overflow: hidden;
 }
+
 .hero-img {
   object-fit: cover;
   width: 100%;
@@ -141,6 +160,7 @@ body {
   top: 0;
   left: 0;
 }
+
 .hero-bg-txt {
   position: relative;
   top: 50vh;
@@ -150,6 +170,7 @@ body {
   align-items: stretch;
   justify-content: center;
 }
+
 .atelier-txt {
   font-family: "Roboto Slab", serif;
   font-weight: 100;
@@ -177,15 +198,18 @@ body {
   height: auto;
   min-height: 90vh;
 }
+
 .line {
   width: 1px;
   min-height: 120px;
   background-color: black;
 }
+
 .artwork-wrapper {
   width: 100vw;
   height: 60vh;
 }
+
 .briefing {
   max-width: 474px;
   margin: 30px;
@@ -195,6 +219,7 @@ body {
   font-size: 13px;
   line-height: 18px;
 }
+
 .swiper {
   width: 100%;
   height: 100%;
@@ -211,8 +236,8 @@ body {
 
 .swiper-slide img {
   display: block;
-  width: 80%;
-  height: 80%;
+  width: 90%;
+  height: 90%;
   object-fit: contain;
   transition: all 0.3s ease-out;
   cursor: pointer;
@@ -234,6 +259,7 @@ video {
   align-items: center;
   justify-content: center;
 }
+
 .profile-pic-wrapper {
   min-width: 60%;
   height: 70vh;
@@ -266,30 +292,110 @@ video {
   right: auto;
 }
 
-@media (max-width: 991px) {
+footer {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
 }
+
+.footer-links {
+  display: flex;
+  justify-content: space-between;
+  min-width: 50vw;
+}
+
+.footer-link {
+  margin: 0 20px;
+  text-decoration: none;
+  position: relative;
+}
+
+.footer-link:after {
+  content: "";
+  /* Add content after the element */
+  position: absolute;
+  /* Position absolute for pseudo-element */
+  width: 100%;
+  /* Full width */
+  transform: scaleX(0);
+  /* Initial scale of 0 for underline effect */
+  height: 1px;
+  /* Height of the underline */
+  bottom: 0;
+  /* Align to bottom */
+  left: 0;
+  /* Align to left */
+  background-color: #000000;
+  /* Background color of the underline */
+  transform-origin: bottom right;
+  /* Set transform origin */
+  transition: transform 0.25s ease-out;
+  /* Transition effect for the underline */
+}
+
+.footer-link:hover:after {
+  transform: scaleX(1);
+  /* Scale the underline on hover */
+  transform-origin: bottom left;
+  /* Set transform origin */
+}
+
+.copyright{
+  color: rgba(120, 120, 120, 0.5);
+}
+
+.dev-link{
+  text-decoration: none;
+  color: rgba(120, 120, 120, 0.5);
+}
+
+.under-construction{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3em;
+}
+@media (max-width: 991px) {}
+
 @media (max-width: 767px) {
   .burger-menu-btn {
     visibility: visible;
   }
+
   .nav-link {
     visibility: hidden;
   }
+
   .section-4 {
     flex-direction: column-reverse;
   }
+
   .artist-quote-wrapper {
     padding: 60px;
   }
+
   .artwork-wrapper {
     height: 80vh;
   }
+
   .swiper-slide img {
     height: 100%;
     width: 100%;
 
   }
+
+  footer {
+    flex-direction: column;
+    align-items: center;
+  }
+ .footer-links{
+  min-width: 80vw;
+ }
+ .copyright{
+  margin-top: 20px;
+ }
 }
+
 @media (max-width: 478px) {
   .artwork-wrapper {
     height: 90vh;

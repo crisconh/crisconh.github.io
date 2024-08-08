@@ -45,6 +45,11 @@ gsap.from(".swiper", {
   ease: "power1.out",
 });
 
+var underConstAnim = gsap.timeline({ repeat: -1 });
+underConstAnim
+  .to(".under-construction", { duration: 2, opacity: 0, stagger: 2 })
+  .to(".under-construction", { duration: 2, opacity: 1, stagger: 2 });
+
 const videos = gsap.utils.toArray("video");
 
 videos.forEach(function (video, i) {
@@ -70,7 +75,7 @@ mobileMenuBtn.addEventListener("click", () => {
 });
 
 mobileMenuBtnClose.addEventListener("click", () => {
-  console.log("CCC")
+  console.log("CCC");
   mobileMenu.style.visibility = "hidden";
   mobileMenu.style.transform = "translateY(100vh)";
 });
@@ -78,7 +83,8 @@ mobileMenuBtnClose.addEventListener("click", () => {
 //CODE FOR THE CARROUSEL
 
 var swiper = new Swiper(".mySwiper", {
-  spaceBetween: 30,
+  slidesPerView: 2.5,
+  spaceBetween: 80,
   freeMode: true,
   pagination: {
     el: ".swiper-pagination",
@@ -95,7 +101,7 @@ var swiper = new Swiper(".mySwiper", {
     // when window width is <= 999px
     767: {
       slidesPerView: 2.5,
-      spaceBetweenSlides: 20,
+      spaceBetweenSlides: 40,
     },
   },
 });
