@@ -33,6 +33,7 @@ body {
 .nav-logo-text {
   letter-spacing: 0.8vw;
   text-align: center;
+  text-decoration: none;
 }
 
 .nav-logo-text a{
