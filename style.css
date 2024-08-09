@@ -378,12 +378,12 @@ footer {
   align-items: center;
 }
 
-.artworks-hero{
+.artworks-hero {
   min-height: 100vh;
   width: 100%;
   display: flex;
 }
-.artworks-main-img{
+.artworks-main-img {
   position: absolute;
   top: 0;
   left: 0;
@@ -391,7 +391,7 @@ footer {
   height: 100%;
 }
 
-.artworks-txt{
+.artworks-txt {
   margin-top: 15px;
   font-size: 100px;
   line-height: 100%;
@@ -416,7 +416,7 @@ footer {
   transition: all 0.1s ease-out;
 }
 
-.artwork-card:hover{
+.artwork-card:hover {
   transform: scale(0.95);
 }
 .artwork-img img {
@@ -425,7 +425,7 @@ footer {
   object-fit: cover;
 }
 
-.artwork-title{
+.artwork-title {
   font-family: "Noto Serif", serif;
   font-weight: 400;
   margin: 10px 0;
