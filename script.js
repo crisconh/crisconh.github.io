@@ -4,7 +4,7 @@ var mobileMenuOpen = false;
 window.onload = function () {
   var timeline = new TimelineMax();
   timeline
-    .from(".hero-bg-txt", 1, { x: -300 }, 0)
+    .from(".hero-bg-txt", 1, { x: 300 }, 0)
     .from(".hero-fg", 1, { scale: 1.5 }, 0)
     .from(".brand-nav", 1, { opacity: 0 }, 0.5)
     .from(".nav-links", 1, { opacity: 0 }, 1);
@@ -28,7 +28,7 @@ gsap.to(".hero-bg-txt", {
     toggleAction: "play none none none",
     scrub: 1,
   },
-  x: 300,
+  x: -300,
   duration: 2,
 });
 
