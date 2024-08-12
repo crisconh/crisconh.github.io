@@ -12,7 +12,7 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   </head>
   <body>
-    <div class="page-wrapper">
+    <div class="page-wrapper no-y-scroll">
       <!--Header Nav Component-->
       <div class="nav">
         <div class="brand-nav">
@@ -38,33 +38,31 @@
             </div>
             <div class="mobile-menu-links">
               <a href="index.html" class="mobile-nav-link">Home</a>
-              <a href="#Artworks" class="mobile-nav-link">Artworks</a>
-              <a href="#About" class="mobile-nav-link">About</a>
-              <a href="#Contact" class="mobile-nav-link">Contact</a>
+              <a href="artworks.html" class="mobile-nav-link">Artworks</a>
+              <a href="about.html" class="mobile-nav-link">About</a>
+              <a href="contact.html" class="mobile-nav-link">Contact</a>
             </div>
           </div>
         </div>
       </div>
       <!--END of Header Nav Component-->
-
-      <div class="under-construction">UNDER CONSTRUCTION</div>
-
-      <!--Footer Component-->
-      <footer>
-        <div class="footer-links">
-          <a href="./artworks.html" class="footer-link">Artworks</a>
-          <a href="./about.html" class="footer-link">About</a>
-          <a href="./contact.html" class="footer-link">Contact</a>
+      <div class="section-hero">
+        <video class="contact-video" loop webkit-playsinline playsinline>
+          <source src="sources/contact-video.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <div class="artworks-txt">Say <br />Hi</div>
+        <div class="contact-links">
+          <a href="mailto:contact@antonialcover.info" class="mail-link"
+            >contact@antonialcover.info</a
+          >
         </div>
-        <div class="copyright">
-          ©2024 Antoni Alcover | by <a href="" class="dev-link">Christian R.</a>
-        </div>
-      </footer>
+      </div>
     </div>
-    <!--END of Footer Component-->
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/MotionPathPlugin.min.js"></script>
     <script src="script.js"></script>
+    <script src="artworks.js"></script>
   </body>
 </html>
