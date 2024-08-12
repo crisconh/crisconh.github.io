@@ -530,6 +530,10 @@ footer {
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
+  .artworks-txt {
+    font-size: 60px;
+    letter-spacing: 1vw;
+  }
 }
 
 @media (max-width: 478px) {

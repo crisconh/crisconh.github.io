@@ -100,7 +100,7 @@ var swiper = new Swiper(".mySwiper", {
     },
     // when window width is <= 999px
     767: {
-      slidesPerView: 2.5,
+      slidesPerView: 1.5,
       spaceBetweenSlides: 40,
     },
   },
