@@ -6,8 +6,8 @@ window.onload = function () {
   timeline
     .from(".hero-bg-txt", 1, { x: 300 }, 0)
     .from(".hero-fg", 1, { scale: 1.5 }, 0)
-    .from(".brand-nav", 1, { opacity: 0 }, 2)
-    .from(".nav-links", 1, { opacity: 0 }, 1.5);
+    .from(".brand-nav", 1, { opacity: 0 }, 1)
+    .from(".nav-links", 1, { opacity: 0 }, 0.75);
 };
 
 gsap.to(".separator", {
@@ -77,7 +77,7 @@ mobileMenuBtn.addEventListener("click", () => {
 mobileMenuBtnClose.addEventListener("click", () => {
   console.log("CCC");
   mobileMenu.style.visibility = "hidden";
-  mobileMenu.style.transform = "translateY(100vh)";
+  mobileMenu.style.transform = "translateY(-100vh)";
 });
 
 //CODE FOR THE CARROUSEL
