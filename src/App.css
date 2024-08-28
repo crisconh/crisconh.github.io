@@ -1,0 +1,414 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: white;
+  width: 100vw;
+}
+
+nav {
+  display: flex;
+  width: 100%;
+  position: fixed;
+  align-items: center;
+  z-index: 11;
+  color: white;
+  mix-blend-mode: exclusion;
+}
+
+.brand_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo_container {
+  margin: 1.5rem;
+  height: 1.5rem;
+  width: 1.5rem;
+  position: relative;
+}
+
+.square_logo {
+  width: 1rem;
+  height: 1rem;
+  position: absolute;
+  border: 2px solid white;
+}
+
+#square_1 {
+  right: 0;
+  top: 0;
+}
+#square_2 {
+  left: 0;
+  bottom: 0;
+}
+
+.text_logo_container {
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.menu_btn {
+  margin: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  position: absolute;
+  right: 0;
+  cursor: pointer;
+}
+
+.menu_line {
+  margin: 3px;
+  width: 50px;
+  height: 2px;
+  background-color: white;
+}
+
+#section_1 {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section_1_overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.35;
+}
+
+.video_section_1 {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.hero_txt {
+  font-size: 8.5rem;
+  color: white;
+  display: flex;
+  line-height: 8.5rem;
+  position: relative;
+}
+
+.changing_txt_container {
+  position: relative;
+  height: 10rem;
+  overflow-y: hidden;
+  margin-right: 0.15em;
+}
+.changing_txt {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.txt_spacer {
+  visibility: hidden;
+}
+.main_txt {
+  margin: 10px;
+}
+
+#section_2 {
+  padding: 2rem;
+  padding-top: max(10rem, 12.5vw);
+  width: 100%;
+}
+
+.welcome_wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  max-height: 100vh;
+}
+
+.welcome_txt {
+  display: flex;
+  flex-direction: column;
+  padding: 0 30px;
+  max-width: 40%;
+}
+
+.welcome_txt h1 {
+  max-width: 500px;
+  font-size: 4rem;
+  letter-spacing: -0.01em;
+  line-height: 4rem;
+  display: inline-block;
+}
+
+.welcome_txt span {
+  padding-top: 2.5rem;
+  max-width: 100%;
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.welcome_txt a {
+  font-size: 1rem;
+  font-weight: 650;
+  line-height: 1.5rem;
+  color: black;
+}
+
+.section_2_container {
+  padding: 0 1rem 0 0.5rem;
+  aspect-ratio: 1/1.129;
+  width: 50%;
+  min-height: 100vh;
+}
+
+img {
+  width: 100%;
+}
+
+.section_3_wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.staircase_container {
+  max-width: 50%;
+  padding: 0 0.5rem 0 1rem;
+  aspect-ratio: 1/1.545;
+}
+
+.section_3_right_col {
+  padding: 0 1rem 0 0.5rem;
+  max-width: 50%;
+  min-height: 90vh;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.section_3_txt {
+  padding-bottom: 3.5rem;
+  padding-right: 2rem;
+  padding-left: 25%;
+  padding-top: 4rem;
+  font-weight: 300;
+  font-size: 1.25rem;
+  line-height: 1.8756rem;
+}
+
+.section_3_txt p {
+  padding-bottom: 1.411em;
+}
+
+.section_3_txt p span {
+  font-weight: 500;
+}
+
+.parallax_img {
+  position: relative;
+  align-items: end;
+  object-fit: cover;
+}
+
+.parallax_container {
+  overflow: hidden;
+}
+
+.section_4 {
+  width: 100%;
+  height: 300vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+  background-color: black;
+}
+
+.section_4_txt {
+  position: absolute;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  z-index: 5;
+  max-width: 60%;
+  font-size: 2rem;
+  text-align: center;
+  height: 100vh;
+}
+
+.section_4_txt h1 {
+  letter-spacing: -0.01em;
+  padding: 1.5rem;
+}
+
+.section_4_txt a {
+  padding: 1.5rem;
+  font-size: 1.5rem;
+  color: white;
+}
+.section_4_video_wrapper {
+  height: 100svh;
+  width: 100%;
+  position: sticky;
+  top: 0;
+}
+.video_section_4 {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.section_4_overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.35;
+  z-index: 0;
+}
+
+.section_5 {
+  height: 300vh;
+  width: 100%;
+  position: relative;
+  top: -100vh;
+  background-color: black;
+}
+
+.section_5_content {
+  height: 100vh;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.s5_bg_img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.s5_img {
+  height: 70vh;
+  width: 30vw;
+  z-index: 2;
+  overflow: hidden;
+}
+
+.scroll {
+  display: inline-flex;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  transform: translateY(-50%);
+  white-space: nowrap;
+  z-index: 5;
+  overflow: hidden;
+}
+
+.text_container {
+  white-space: nowrap;
+  display: inline-block;
+  flex-wrap: nowrap;
+  animation: infinity 35s infinite linear;
+}
+
+.s5_txt {
+  font-size: 10rem;
+  display: inline-block;
+  font-weight: 500;
+  width: max-content;
+  color: white;
+  margin: 0 4rem;
+  opacity: 0.5;
+}
+
+.bg_image_highlight {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.section_5_overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.5;
+  z-index: 1;
+}
+
+@keyframes infinity {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/*MEDIA QUERYS*/
+/* Landscape phones and down */
+@media (max-width: 480px) {
+
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+  
+}
+
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) {
+
+}
+
+/* Large desktop */
+@media (min-width: 1200px) {
+
+}
