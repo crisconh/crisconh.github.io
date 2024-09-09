@@ -1,22 +1,21 @@
-import { useRef, useState, useEffect } from "react";
+import { useRef, useState } from "react";
 import carrousel_img_1 from "../assets/Vuital/jpeg-optimizer_modern-house-entrance-with-garden-and-wooden-deck-2023-11-27-05-11-36-utc.jpg";
 import carrousel_img_2 from "../assets/Vuital/jpeg-optimizer_modern-house-exterior-2023-11-27-05-08-12-utc.jpg";
 import carrousel_img_3 from "../assets/Vuital/jpeg-optimizer_modern-house-exterior-2023-11-27-05-21-58-utc.jpg";
 import carrousel_img_4 from "../assets/Vuital/jpeg-optimizer_modern-house-exterior-2023-11-27-05-28-56-utc.jpg";
 import carrousel_img_5 from "../assets/Vuital/jpeg-optimizer_spacious-bright-corridor-with-stairs-and-entrance-2023-11-27-04-54-04-utc.jpg";
 import carrousel_img_6 from "../assets/Vuital/jpeg-optimizer_facade-of-modern-high-rise-residential-building-2023-11-27-05-05-36-utc.jpg";
-import carrousel_img_7 from "../assets/Vuital/jpeg-optimizer_modern-house-exterior-2023-11-27-05-28-56-utc.jpg";
-import carrousel_img_8 from "../assets/Vuital/jpeg-optimizer_modern-house-exterior-2023-11-27-05-28-56-utc.jpg";
 
 export const ShowcaseSlider = () => {
   //DRAGABLE CARROUSEL START
-  const itemsRef = useRef(null);
+  const itemsRef = useRef<HTMLDivElement>(null);
   const [isMouseDown, setIsMouseDown] = useState(false);
   const [startX, setStartX] = useState(0);
   const [scrollLeft, setScrollLeft] = useState(0);
 
-  const handleMouseDown = (e) => {
+  const handleMouseDown = (e:any) => {
     setIsMouseDown(true);
+    if (!itemsRef.current) return
     setStartX(e.pageX - -itemsRef.current.offsetLeft);
     setScrollLeft(itemsRef.current.scrollLeft);
   };
@@ -26,9 +25,10 @@ export const ShowcaseSlider = () => {
   const handleMouseUp = () => {
     setIsMouseDown(false);
   };
-  const handleMouseMove = (e) => {
+  const handleMouseMove = (e:any) => {
     if (!isMouseDown) return;
     e.preventDefault();
+    if (!itemsRef.current) return
     const x = e.pageX - itemsRef.current.offsetLeft;
     const walk = (x - startX) * 2; //adjust the speed
     itemsRef.current.scrollLeft = scrollLeft - walk;
