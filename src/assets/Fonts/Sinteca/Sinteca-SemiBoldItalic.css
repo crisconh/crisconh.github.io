@@ -1,0 +1,12 @@
+/* Webfont: Sinteca-SemiBoldItalic */@font-face {
+    font-family: 'SintecaSemBdIta';
+    src: url('Sinteca-SemiBoldItalic.eot'); /* IE9 Compat Modes */
+    src: url('Sinteca-SemiBoldItalic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('Sinteca-SemiBoldItalic.woff') format('woff'), /* Modern Browsers */
+         url('Sinteca-SemiBoldItalic.woff2') format('woff2'), /* Modern Browsers */
+         url('Sinteca-SemiBoldItalic.ttf') format('truetype'); /* Safari, Android, iOS */
+             font-style: italic;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+

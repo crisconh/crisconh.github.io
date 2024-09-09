@@ -1,14 +1,15 @@
 import { BackgroundVideo } from "./BackgroundVideo";
 import video_1 from "../assets/home_video.mp4";
 import video_section_4 from "../assets/section_4.mp4";
-import section_2_img from "../assets/section_2_img.jpg";
-import staircase_img from "../assets/staircase.jpg";
-import building_img from "../assets/building.jpg";
+import section_2_img from "../assets/Vuital/jpeg-optimizer_luxurious-tv-living-room-2023-11-27-05-23-59-utc.jpg";
+import staircase_img from "../assets/Vuital/jpeg-optimizer_modern-architecture-and-empty-staircase-leading-to-2023-11-27-05-32-14-utc.jpg";
+import building_img from "../assets/Vuital/jpeg-optimizer_modern-office-building-glass-facade-architecture-2023-11-27-05-16-03-utc.jpg";
 import { ChangingText } from "./ChangingText";
 import { ParallaxImg } from "./ParallaxImg";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import { InfiniteCarrousel } from "./InfiniteCarrousel";
+import { ShowcaseSlider } from "./ShowcaseSlider";
 
 export const HomePage = () => {
   const appearAnimation = {
@@ -113,10 +114,10 @@ export const HomePage = () => {
           <div className="section_4_overlay"></div>
           <div className="section_4_txt">
             <h1>
-              VUIT is more than just an architecture firm; we are a community of
-              creative thinkers
+              VUITAL is more than just an architecture firm; we are a community
+              of creative thinkers
             </h1>
-            <a href="" className="link_talents">
+            <a href="" className="link_txt">
               {" "}
               View talent
             </a>
@@ -128,6 +129,7 @@ export const HomePage = () => {
           <InfiniteCarrousel />
         </div>
       </motion.div>
+      <ShowcaseSlider />
     </>
   );
 };

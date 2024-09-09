@@ -1,0 +1,12 @@
+/* Webfont: Sinteca-Italic */@font-face {
+    font-family: 'SintecaIta';
+    src: url('Sinteca-Italic.eot'); /* IE9 Compat Modes */
+    src: url('Sinteca-Italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('Sinteca-Italic.woff') format('woff'), /* Modern Browsers */
+         url('Sinteca-Italic.woff2') format('woff2'), /* Modern Browsers */
+         url('Sinteca-Italic.ttf') format('truetype'); /* Safari, Android, iOS */
+             font-style: italic;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+

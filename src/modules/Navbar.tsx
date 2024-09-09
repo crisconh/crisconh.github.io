@@ -38,7 +38,7 @@ export const Navbar = ({ onClick, menuVisible }: Props) => {
             <div className="square_logo" id="square_1"></div>
             <div className="square_logo" id="square_2"></div>
           </div>
-          <div className="text_logo_container">VUIT</div>
+          <div className="text_logo_container">vuital</div>
         </div>
         <div className="menu_btn" onClick={onClick}>
           <motion.div

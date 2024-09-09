@@ -1,0 +1,12 @@
+/* Webfont: Sinteca-Black */@font-face {
+    font-family: 'SintecaBlack';
+    src: url('Sinteca-Black.eot'); /* IE9 Compat Modes */
+    src: url('Sinteca-Black.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('Sinteca-Black.woff') format('woff'), /* Modern Browsers */
+         url('Sinteca-Black.woff2') format('woff2'), /* Modern Browsers */
+         url('Sinteca-Black.ttf') format('truetype'); /* Safari, Android, iOS */
+             font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+

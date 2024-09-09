@@ -1,0 +1,12 @@
+/* Webfont: Sinteca-Medium */@font-face {
+    font-family: 'SintecaMed';
+    src: url('Sinteca-Medium.eot'); /* IE9 Compat Modes */
+    src: url('Sinteca-Medium.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('Sinteca-Medium.woff') format('woff'), /* Modern Browsers */
+         url('Sinteca-Medium.woff2') format('woff2'), /* Modern Browsers */
+         url('Sinteca-Medium.ttf') format('truetype'); /* Safari, Android, iOS */
+             font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+

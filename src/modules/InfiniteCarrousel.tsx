@@ -1,9 +1,9 @@
 import { motion, cubicBezier } from "framer-motion";
 import { useState } from "react";
-import hospitality_img from "../assets/hospitality_img.jpg";
-import consultancy_img from "../assets/consultancy_img.jpg";
-import homedesign_img from "../assets/homedesign_img.jpg";
-import residential_img from "../assets/residential_img.jpg";
+import hospitality_img from "../assets/Vuital/austria-vienna-modern-office-building-2023-11-27-05-24-42-utc.jpeg";
+import offices_img from "../assets/Vuital/office-buildings-2023-11-27-05-01-21-utc.jpeg";
+import homedesign_img from "../assets/Vuital/jpeg-optimizer_luxurious-tv-living-room-2023-11-27-05-23-59-utc.jpg";
+import residential_img from "../assets/Vuital/jpeg-optimizer_modern-house-exterior-2023-11-27-05-28-56-utc.jpg";
 
 export const InfiniteCarrousel = () => {
   const SHOW_THEMES = [
@@ -15,10 +15,10 @@ export const InfiniteCarrousel = () => {
       opacity: 0.4,
     },
     {
-      title: "consultancy",
-      text: "Consultancy",
+      title: "offices",
+      text: "Working Spaces",
       id: "",
-      imgSrc: consultancy_img,
+      imgSrc: offices_img,
       opacity: 0.4,
     },
     {
@@ -36,27 +36,27 @@ export const InfiniteCarrousel = () => {
       opacity: 0.4,
     },
     {
-      title: "healthcare",
-      text: "Healthcare",
+      title: "offices",
+      text: "Offices",
       id: "",
-      imgSrc: consultancy_img,
+      imgSrc: offices_img,
       opacity: 0.4,
     },
   ];
 
-  const [highlightStyle, setHighlightStyle] = useState([0, 0, 0, 0, 0]);
-  const [highlightImg, setHighlightImg] = useState("");
+  const [highlightStyle, setHighlightStyle] = useState([1, 0, 0, 0, 0]);
+  const [highlightImg, setHighlightImg] = useState(SHOW_THEMES[0].imgSrc);
 
   function changeHighlightElement(i: number) {
     setHighlightStyle(
-      highlightStyle.map((item, index) => (index === i ? 1 : 0.4))
+      highlightStyle.map((_item, index) => (index === i ? 1 : 0.4))
     );
     setHighlightImg(SHOW_THEMES[i].imgSrc);
   }
 
   return (
     <>
-    <div className="section_5_overlay"></div>
+      <div className="section_5_overlay"></div>
       <div className="s5_bg_img">
         <motion.img
           className={"bg_image_highlight"}
@@ -72,12 +72,12 @@ export const InfiniteCarrousel = () => {
         />
       </div>
       <div className="s5_img">
-      <motion.img
+        <motion.img
           className={"bg_image_highlight"}
           src={highlightImg}
           key={highlightImg}
-          initial={{ opacity: 0, y:"100%"}}
-          animate={{ opacity: 1, y:0}}
+          initial={{ opacity: 0, y: "100%" }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{
             ease: cubicBezier(0.165, 0.84, 0.44, 1),
             duration: 0.4,
