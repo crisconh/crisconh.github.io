@@ -30,7 +30,7 @@ export const ShowcaseSlider = () => {
     e.preventDefault();
     if (!itemsRef.current) return
     const x = e.pageX - itemsRef.current.offsetLeft;
-    const walk = (x - startX) * 2; //adjust the speed
+    const walk = (x - startX) * 0.8; //adjust the speed
     itemsRef.current.scrollLeft = scrollLeft - walk;
   };
 
