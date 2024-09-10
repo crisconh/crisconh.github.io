@@ -108,7 +108,7 @@ export const HomePage = () => {
           </div>
         </div>
       </div>
-      <motion.div ref={ref} className="section_4">
+      <div ref={ref} className="section_4">
         <motion.div style={{ opacity }} className="section_4_video_wrapper">
           <BackgroundVideo source={video_section_4} clase="video_section_4" />
           <div className="section_4_overlay"></div>
@@ -123,12 +123,12 @@ export const HomePage = () => {
             </a>
           </div>
         </motion.div>
-      </motion.div>
-      <motion.div className="section_5">
-        <div className="section_5_content">
+      </div>
+      <div className="section_5">
+      <div className="section_5_content">
           <InfiniteCarrousel />
         </div>
-      </motion.div>
+      </div>
       <ShowcaseSlider />
     </>
   );

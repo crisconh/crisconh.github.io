@@ -28,7 +28,7 @@ export const ParallaxImg = (props: Props) => {
     <>
       <div className={props.imgName+"_container parallax_container"} ref={container}>
         <motion.img
-          className={props.imgName+"_img parallax_img"}
+          className={"parallax_img"}
           src={props.imgSrc}
           alt=""
           style={{top:mov, height:props.imgHeight, position:'relative'}}

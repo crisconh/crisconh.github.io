@@ -123,7 +123,7 @@ nav {
 }
 
 #section_1 {
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -134,15 +134,15 @@ nav {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   background-color: black;
   opacity: 0.35;
 }
 
 .video_section_1 {
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   object-fit: cover;
   position: absolute;
   top: 0;
@@ -187,9 +187,9 @@ nav {
 .welcome_wrapper {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: stretch;
   width: 100%;
-  max-height: 100vh;
+
 }
 
 .welcome_txt {
@@ -225,7 +225,7 @@ nav {
   padding: 0 1rem 0 0.5rem;
   aspect-ratio: 1/1.129;
   width: 50%;
-  min-height: 100vh;
+  min-height: 80vh;
 }
 
 img {
@@ -324,6 +324,7 @@ img {
   width: 100%;
   position: sticky;
   top: 0;
+  left: 0;
 }
 .video_section_4 {
   width: 100%;
@@ -358,7 +359,7 @@ img {
   width: 100%;
   position: sticky;
   top: 0;
-  right: 0;
+  left: 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -551,6 +552,40 @@ img {
   .changing_txt_container {
     height: 7rem;
   }
+  .welcome_txt h1 {
+    font-size: 3rem;
+    letter-spacing: -0.01em;
+    line-height: 3rem;
+  }
+
+  .welcome_txt span {
+    padding-top: 2rem;
+    font-size: 1rem;
+    line-height: 2rem;
+  }
+
+  .welcome_txt a {
+    font-size: 1rem;
+    padding-top: 1rem;
+    font-weight: 650;
+    line-height: 1.5rem;
+  }
+  .section_3_txt {
+    padding-bottom: 3.5rem;
+    padding-right: 2rem;
+    padding-left: 20%;
+    padding-top: 4rem;
+    font-size: 1rem;
+    line-height: 1.8756rem;
+  }
+  .section_4_txt {
+    font-size: 1.5rem;
+  }
+  
+  .section_4_txt h1 {
+    letter-spacing: -0.01em;
+    padding: 1.5rem;
+  }
 }
 
 /* Landscape phone to portrait tablet */
@@ -577,11 +612,88 @@ img {
   .changing_txt_container {
     height: 5rem;
   }
+
+  .welcome_txt span {
+    padding-top: 2rem;
+    font-size: 1rem;
+    line-height: 2rem;
+  }
+
+  .welcome_txt a {
+    font-size: 1rem;
+    padding-top: 1rem;
+    font-weight: 650;
+    line-height: 1.5rem;
+  }
+  .section_3_txt {
+    padding-bottom: 2.5rem;
+    padding-right: 1rem;
+    padding-left: 15%;
+    padding-top: 4rem;
+  }
+  .section_4_txt {
+    font-size: 1.25rem;
+    min-width: 80%;
+  }
 }
 /* Landscape phones and down */
 @media (max-width: 767px) {
   .menu_line {
     width: 40px;
+  }
+  #section_2 {
+    padding: 2rem;
+    padding-top: max(4rem, 12.5vw);
+    width: 100%;
+  }
+  .welcome_wrapper {
+    flex-direction: column;
+    align-items: center;
+    max-width: 100vw;
+    max-height: none;
+  }
+  .welcome_txt {
+    flex-direction: column;
+    padding: 0 30px;
+    max-width: 90%;
+  }
+  .section_2_container {
+    margin: 1rem;
+    padding: 0;
+    margin-top: 3rem;
+    aspect-ratio: auto;
+    min-width: 80%;
+    min-height: 80vh;
+    height: 50vh;
+  }
+  .section_3_wrapper {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    width: 100%;
+  }
+
+  .staircase_container {
+    max-width: 80%;
+    margin: 1rem;
+    padding: 0;
+    aspect-ratio: 1/1.545;
+  }
+
+  .section_3_right_col {
+    margin: 1rem;
+    padding: 0;
+    min-height: 90vh;
+    min-width: 80%;
+  }
+  .section_3_txt {
+    max-width: 80vw;
+    padding: 0;
+    margin-bottom: 3.5rem;
+    margin-top: 4rem;
+    font-size: 1rem;
+    line-height: 1.8756rem;
   }
 }
 
@@ -611,5 +723,41 @@ img {
   }
   .changing_txt_container {
     height: 4rem;
+  }
+  .welcome_txt h1 {
+    font-size: 3rem;
+    letter-spacing: -0.01em;
+    line-height: 3rem;
+  }
+
+  .welcome_txt span {
+    padding-top: 2rem;
+    font-size: 1rem;
+    line-height: 2rem;
+  }
+
+  .welcome_txt a {
+    font-size: 1rem;
+    padding-top: 1rem;
+    font-weight: 650;
+    line-height: 1.5rem;
+  }
+  .section_3_txt {
+    padding-bottom: 3.5rem;
+    padding-right: 2rem;
+    padding-left: 20%;
+    padding-top: 4rem;
+    font-size: 1rem;
+    line-height: 1.8756rem;
+  }
+  .section_4_txt {
+    font-size: 1rem;
+    min-width: 100%;
+    padding: 0.5rem;
+  }
+  
+  .section_4_txt h1 {
+    letter-spacing: -0.01em;
+    padding: 1.5rem;
   }
 }
