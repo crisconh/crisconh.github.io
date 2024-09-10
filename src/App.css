@@ -718,11 +718,19 @@ img {
     width: 35px;
   }
   .hero_txt {
-    font-size: 3rem;
-    line-height: 3rem;
+    font-size: 5rem;
+    line-height: 6rem;
+    grid-template-columns: 1fr;
+    position: relative;
+    left: 50%;
+    transform: translateX(-25%);
   }
+  .changing_txt{
+    left: 10px;
+  }
+
   .changing_txt_container {
-    height: 4rem;
+    height: 6rem;
   }
   .welcome_txt h1 {
     font-size: 3rem;
@@ -759,5 +767,76 @@ img {
   .section_4_txt h1 {
     letter-spacing: -0.01em;
     padding: 1.5rem;
+  }
+}
+
+@media (max-width: 450px) {
+  .logo_container {
+    margin: 1rem 0.5rem 1rem 1rem;
+    height: 1rem;
+    width: 1rem;
+  }
+
+  .square_logo {
+    width: 0.65rem;
+    height: 0.65rem;
+    border: 1px solid white;
+  }
+
+  .text_logo_container {
+    font-size: 1.25rem;
+  }
+
+  .menu_line {
+    width: 35px;
+  }
+
+
+  .welcome_txt h1 {
+    font-size: 3rem;
+    letter-spacing: -0.01em;
+    line-height: 3rem;
+  }
+
+  .welcome_txt span {
+    padding-top: 2rem;
+    font-size: 1rem;
+    line-height: 2rem;
+  }
+
+  .welcome_txt a {
+    font-size: 1rem;
+    padding-top: 1rem;
+    font-weight: 650;
+    line-height: 1.5rem;
+  }
+  .section_3_txt {
+    padding-bottom: 3.5rem;
+    padding-right: 2rem;
+    padding-left: 20%;
+    padding-top: 4rem;
+    font-size: 1rem;
+    line-height: 1.8756rem;
+  }
+  .section_4_txt {
+    font-size: 1rem;
+    min-width: 100%;
+    padding: 0.5rem;
+  }
+  
+  .section_4_txt h1 {
+    letter-spacing: -0.01em;
+    padding: 1.5rem;
+  }
+  .hero_txt {
+    font-size: 3rem;
+    line-height: 4rem;
+  }
+  .changing_txt{
+    left: 10px;
+  }
+
+  .changing_txt_container {
+    height: 4rem;
   }
 }

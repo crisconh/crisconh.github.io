@@ -47,17 +47,12 @@ export const InfiniteCarrousel = () => {
     highLightStyle: [1, 0, 0, 0, 0],
     highLightImg: SHOW_THEMES[0].imgSrc,
   });
-  const [highlightStyle, setHighlightStyle] = useState([1, 0, 0, 0, 0]);
-  const [highlightImg, setHighlightImg] = useState(SHOW_THEMES[0].imgSrc);
 
   function changeHighlightElement(i: number) {
-    /* setHighlightStyle(
-      highlightStyle.map((_item, index) => (index === i ? 1 : 0.4))
-    );
-    setHighlightImg(SHOW_THEMES[i].imgSrc); */
+
     setHighLight({
       highLightImg: SHOW_THEMES[i].imgSrc,
-      highLightStyle: highlightStyle.map((_item, index) =>
+      highLightStyle: highLight.highLightStyle.map((_item, index) =>
         index === i ? 1 : 0.4
       ),
     });
