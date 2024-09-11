@@ -162,6 +162,8 @@ nav {
 
 .changing_txt_container {
   position: relative;
+  display: flex;
+  align-items: center;
   height: 10rem;
   overflow: hidden;
   margin-right: 0.15em;
@@ -290,11 +292,15 @@ img {
   justify-content: center;
   align-items: flex-start;
   position: relative;
+  top: 0;
+  left: 0;
   background-color: black;
 }
 
 .section_4_txt {
   position: absolute;
+  top: 0;
+  left: 0;
   margin-left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -320,19 +326,16 @@ img {
   color: white;
 }
 .section_4_video_wrapper {
-  height: 100svh;
+  height: 100vh;
   width: 100%;
   position: sticky;
   top: 0;
   left: 0;
 }
 .video_section_4 {
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100dvh;
   object-fit: cover;
-  position: absolute;
-  top: 0;
-  left: 0;
   z-index: -1;
 }
 .section_4_overlay {
@@ -606,11 +609,17 @@ img {
   }
 
   .hero_txt {
-    font-size: 4rem;
-    line-height: 6rem;
+    font-size: 6rem;
+    line-height: 8rem;
+    padding-left: 10%;
+    display: flex;
+    flex-direction: column;
   }
   .changing_txt_container {
-    height: 5rem;
+    height: 8rem;
+  }
+  .changing_txt{
+    left: 0;
   }
 
   .welcome_txt span {
@@ -641,6 +650,15 @@ img {
   .menu_line {
     width: 40px;
   }
+  .hero_txt {
+    font-size: 5rem;
+    line-height: 6rem;
+    grid-template-columns: 1fr; 
+  }
+
+  .changing_txt_container {
+    height: 6rem;
+  }
   #section_2 {
     padding: 2rem;
     padding-top: max(4rem, 12.5vw);
@@ -657,6 +675,7 @@ img {
     padding: 0 30px;
     max-width: 90%;
   }
+  
   .section_2_container {
     margin: 1rem;
     padding: 0;
@@ -695,80 +714,10 @@ img {
     font-size: 1rem;
     line-height: 1.8756rem;
   }
-}
-
-@media (max-width: 650px) {
-  .logo_container {
-    margin: 1rem 0.5rem 1rem 1rem;
-    height: 1rem;
-    width: 1rem;
-  }
-
-  .square_logo {
-    width: 0.65rem;
-    height: 0.65rem;
-    border: 1px solid white;
-  }
-
-  .text_logo_container {
-    font-size: 1.25rem;
-  }
-
-  .menu_line {
-    width: 35px;
-  }
-  .hero_txt {
-    font-size: 5rem;
-    line-height: 6rem;
-    grid-template-columns: 1fr;
-    position: relative;
-    left: 50%;
-    transform: translateX(-25%);
-  }
-  .changing_txt{
-    left: 10px;
-  }
-
-  .changing_txt_container {
-    height: 6rem;
-  }
-  .welcome_txt h1 {
-    font-size: 3rem;
-    letter-spacing: -0.01em;
-    line-height: 3rem;
-  }
-
-  .welcome_txt span {
-    padding-top: 2rem;
-    font-size: 1rem;
-    line-height: 2rem;
-  }
-
-  .welcome_txt a {
-    font-size: 1rem;
-    padding-top: 1rem;
-    font-weight: 650;
-    line-height: 1.5rem;
-  }
-  .section_3_txt {
-    padding-bottom: 3.5rem;
-    padding-right: 2rem;
-    padding-left: 20%;
-    padding-top: 4rem;
-    font-size: 1rem;
-    line-height: 1.8756rem;
-  }
-  .section_4_txt {
-    font-size: 1rem;
-    min-width: 100%;
-    padding: 0.5rem;
-  }
   
-  .section_4_txt h1 {
-    letter-spacing: -0.01em;
-    padding: 1.5rem;
-  }
 }
+
+
 
 @media (max-width: 450px) {
   .logo_container {

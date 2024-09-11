@@ -10,6 +10,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import { InfiniteCarrousel } from "./InfiniteCarrousel";
 import { ShowcaseSlider } from "./ShowcaseSlider";
+import { EnhancedInfiniteCarrousel } from "./EnhancedInfiniteCarrousel";
 
 export const HomePage = () => {
   const appearAnimation = {
@@ -126,7 +127,7 @@ export const HomePage = () => {
       </div>
       <div className="section_5">
       <div className="section_5_content">
-          <InfiniteCarrousel />
+          <EnhancedInfiniteCarrousel />
         </div>
       </div>
       <ShowcaseSlider />
