@@ -1,55 +1,60 @@
 import { motion, cubicBezier } from "framer-motion";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import hospitality_img from "../assets/Vuital/jpeg-optimizer_austria-vienna-modern-office-building-2023-11-27-05-24-42-utc.jpeg";
 import offices_img from "../assets/Vuital/jpeg-optimizer_office-buildings-2023-11-27-05-01-21-utc.jpeg";
 import homedesign_img from "../assets/Vuital/jpeg-optimizer_luxurious-tv-living-room-2023-11-27-05-23-59-utc.jpg";
 import residential_img from "../assets/Vuital/jpeg-optimizer_modern-house-exterior-2023-11-27-05-28-56-utc.jpg";
 
 export const EnhancedInfiniteCarrousel = () => {
+  // Array ref to hold references to all the items
+  const itemsRef = useRef<Array<HTMLDivElement | null>>([]);
+
+  // Themes data for the carousel
   const SHOW_THEMES = [
     {
       title: "hospitality",
       text: "Hospitality",
       id: "",
-      imgSrc: hospitality_img,
+      imgSrc: hospitality_img, // Replace with actual import
       opacity: 0.4,
     },
     {
       title: "offices",
       text: "Working Spaces",
       id: "",
-      imgSrc: offices_img,
+      imgSrc: offices_img, // Replace with actual import
       opacity: 0.4,
     },
     {
       title: "homedesign",
       text: "Home Design",
       id: "",
-      imgSrc: homedesign_img,
+      imgSrc: homedesign_img, // Replace with actual import
       opacity: 0.4,
     },
     {
       title: "residential",
       text: "Residential",
       id: "",
-      imgSrc: residential_img,
+      imgSrc: residential_img, // Replace with actual import
       opacity: 0.4,
     },
     {
       title: "offices",
       text: "Offices",
       id: "",
-      imgSrc: offices_img,
+      imgSrc: offices_img, // Replace with actual import
       opacity: 0.4,
     },
   ];
+
   const [highLight, setHighLight] = useState({
     highLightStyle: [1, 0, 0, 0, 0],
     highLightImg: SHOW_THEMES[0].imgSrc,
   });
 
+  // Function to change the highlighted element
   function changeHighlightElement(i: number) {
-
     setHighLight({
       highLightImg: SHOW_THEMES[i].imgSrc,
       highLightStyle: highLight.highLightStyle.map((_item, index) =>
@@ -58,9 +63,16 @@ export const EnhancedInfiniteCarrousel = () => {
     });
   }
 
+  // Set references dynamically
+  const setItemRef = (element: any | null, index: number) => {
+    itemsRef.current[index] = element;
+  };
+
   return (
     <>
       <div className="section_5_overlay"></div>
+
+      {/* Background Image */}
       <div className="s5_bg_img">
         <motion.img
           className={"bg_image_highlight"}
@@ -75,6 +87,8 @@ export const EnhancedInfiniteCarrousel = () => {
           alt=""
         />
       </div>
+
+      {/* Foreground Image */}
       <div className="s5_img">
         <motion.img
           className={"bg_image_highlight"}
@@ -89,14 +103,17 @@ export const EnhancedInfiniteCarrousel = () => {
           alt=""
         />
       </div>
+
       <div className="scroll">
         <div className="text_container">
+          {/* First render of the elements */}
           {SHOW_THEMES.map((item, index) => (
             <motion.span
+              ref={(el) => setItemRef(el, index)} // Attach ref dynamically
               onViewportEnter={() => {
                 changeHighlightElement(index);
               }}
-              viewport={{ margin: "0px -50% 0px 0px" }}
+              viewport={{ margin: "0px -50% 0px 0px" }} // Trigger when partially in view
               className={"s5_txt " + item.title}
               id={item.title}
               key={index + item.text}
@@ -105,15 +122,18 @@ export const EnhancedInfiniteCarrousel = () => {
               {item.text}
             </motion.span>
           ))}
+
+          {/* Second render for infinite scroll */}
           {SHOW_THEMES.map((item, index) => (
             <motion.span
+              ref={(el) => setItemRef(el, index + SHOW_THEMES.length)} // Attach ref dynamically for duplicate items
               onViewportEnter={() => {
                 changeHighlightElement(index);
               }}
-              viewport={{ margin: "0px -50% 0px 0px" }}
+              viewport={{ margin: "0px -50% 0px 0px" }} // Trigger when partially in view
               className={"s5_txt " + item.title}
               id={item.title}
-              key={index + item.text}
+              key={index + item.text + "_duplicate"}
               animate={{ opacity: highLight.highLightStyle[index] }}
             >
               {item.text}

@@ -1,6 +1,6 @@
 import { BackgroundVideo } from "./BackgroundVideo";
-import video_1 from "../assets/home_video.mp4";
-import video_section_4 from "../assets/section_4.mp4";
+import video_1 from "../assets/Vuital/fgdhgfj.mp4";
+import video_section_4 from "../assets/Vuital/creative-people-working-on-future-architecture-pro-2023-11-27-05-11-19-utc.mp4";
 import section_2_img from "../assets/Vuital/jpeg-optimizer_luxurious-tv-living-room-2023-11-27-05-23-59-utc.jpg";
 import staircase_img from "../assets/Vuital/jpeg-optimizer_modern-architecture-and-empty-staircase-leading-to-2023-11-27-05-32-14-utc.jpg";
 import building_img from "../assets/Vuital/jpeg-optimizer_modern-office-building-glass-facade-architecture-2023-11-27-05-16-03-utc.jpg";
@@ -8,7 +8,7 @@ import { ChangingText } from "./ChangingText";
 import { ParallaxImg } from "./ParallaxImg";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
-import { InfiniteCarrousel } from "./InfiniteCarrousel";
+/* import { InfiniteCarrousel } from "./InfiniteCarrousel"; */
 import { ShowcaseSlider } from "./ShowcaseSlider";
 import { EnhancedInfiniteCarrousel } from "./EnhancedInfiniteCarrousel";
 
@@ -48,13 +48,14 @@ export const HomePage = () => {
           >
             <h1>A future forward architecture team</h1>
             <span>
-              BAT is a dynamic and future-oriented architectural firm that
-              operates at the interface between design and construction. Our
-              passion lies in the design of the built environment, specializing
-              in architecture in various typologies and scales. We are not only
-              designers, but also visionaries committed to a future where
-              innovation and creativity are paramount. Welcome to BAT — where
-              innovation meets architecture, and the future is our canvas.
+              At VUIT, we see ourselves not merely as architects, but as
+              pioneers shaping the future. Positioned at the intersection of
+              design and construction, we bring a fresh perspective to the built
+              environment, embracing a wide range of architectural styles and
+              scales. Our work is driven by a deep commitment to creativity and
+              forward-thinking solutions, transforming ideas into spaces that
+              inspire. Welcome to VUIT — where imagination shapes architecture,
+              and tomorrow begins today.
             </span>
             <a href="">Our practice</a>
           </motion.div>
@@ -84,26 +85,27 @@ export const HomePage = () => {
             />
             <div className="section_3_txt">
               <p>
-                <span>Building Futures.</span> We are more than just architects;
-                we are builders of tomorrow. We know that every design and
-                construction project has the potential to influence future
-                generations.
+                <span>Building Futures.</span> We don't just design buildings;
+                we craft the future. Every project we undertake holds the
+                potential to leave a lasting impact, influencing the way people
+                experience their world for years to come.
               </p>
 
               <p>
-                <span>Crafting Futures.</span> We are artisans of architecture
-                and architecture is a craft. We take great care in creating
-                spaces that inspire people, evoke emotion and fulfil their
-                purpose. Our attention to detail and dedication to quality
-                craftsmanship is what sets us apart.
+                <span>Crafting Futures.</span> We view architecture as a form of
+                artistry, treating each project as a carefully honed craft. Our
+                goal is to design spaces that not only serve their function but
+                also inspire and resonate emotionally with those who experience
+                them. It's our commitment to precision and exceptional
+                craftsmanship that distinguishes our work from the rest.
               </p>
 
               <p>
-                <span>Dreaming Futures.</span> We are dreamers, in the best
-                sense of the word. Our dreams are imbued with innovative ideas,
-                ambition and a long-term vision. We believe in creating spaces
-                that not only meet current needs, but also adapt and evolve to
-                meet the challenges of the future.
+                <span>Dreaming Futures.</span> We consider ourselves
+                visionaries, fueled by creativity and forward-thinking ideas.
+                Our aspirations are driven by innovation and a focus on the
+                future. We aim to design spaces that go beyond today's demands,
+                evolving seamlessly to address the needs of tomorrow.
               </p>
             </div>
           </div>
@@ -115,8 +117,8 @@ export const HomePage = () => {
           <div className="section_4_overlay"></div>
           <div className="section_4_txt">
             <h1>
-              VUITAL is more than just an architecture firm; we are a community
-              of creative thinkers
+              VUIT is not just an architecture studio; we are a collective of
+              innovative minds working together.
             </h1>
             <a href="" className="link_txt">
               {" "}
@@ -126,7 +128,7 @@ export const HomePage = () => {
         </motion.div>
       </div>
       <div className="section_5">
-      <div className="section_5_content">
+        <div className="section_5_content">
           <EnhancedInfiniteCarrousel />
         </div>
       </div>

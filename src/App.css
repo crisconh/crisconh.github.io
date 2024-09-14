@@ -384,15 +384,15 @@ img {
   width: 30vw;
   z-index: 2;
   overflow: hidden;
+  position: absolute
 }
 
 .scroll {
   display: inline-flex;
-  position: absolute;
+  position: relative;
   left: 0;
-  top: 50%;
+  top: 0;
   width: 100%;
-  transform: translateY(-50%);
   white-space: nowrap;
   z-index: 5;
   overflow: hidden;
@@ -541,7 +541,7 @@ img {
     transform: translateX(0%);
   }
   to {
-    transform: translateX(-50%);
+    transform: translateX(-100%);
   }
 }
 
